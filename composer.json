@@ -1,0 +1,34 @@
+{
+  "name": "odorisioe/silverstripe-robots-txt",
+  "type": "silverstripe-vendormodule",
+  "description": "Feature to manage the robots.txt on SilverStripe",
+  "keywords": [
+    "silverstripe",
+    "cms",
+    "robots",
+    "txt"
+  ],
+  "require": {
+    "silverstripe/cms": "^4.0"
+  },
+  "license": "BSD-2-Clause",
+  "authors": [
+    {
+      "name": "Emmanuel Odorisio",
+      "email": "odorisioe@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.2.*"
+  },
+	"autoload": {
+    "psr-4": {
+      "Odorisioe\\SilverStripe\\RobotsTxt\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

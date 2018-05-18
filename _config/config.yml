@@ -1,0 +1,6 @@
+---
+Name: robotsconfig
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Odorisioe\SilverStripe\RobotsTxt\Model\SiteConfigExtension
