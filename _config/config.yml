@@ -3,4 +3,7 @@ Name: robotsconfig
 ---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - Odorisioe\SilverStripe\RobotsTxt\Model\SiteConfigExtension
+    - Odorisioe\SilverStripe\RobotsTxt\Extensions\SiteConfigExtension
+
+Odorisioe\SilverStripe\RobotsTxt\Extensions\SiteConfigExtension:
+  defaultRobotsDotTxtPath: '/public'
