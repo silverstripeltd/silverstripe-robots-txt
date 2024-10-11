@@ -2,6 +2,6 @@ SilverStripe\SiteConfig\SiteConfig:
   site_config:
     ID: 1
     Title: Robots dot txt
-    RobotsTxtStatus: true
+    RobotsTxtStatus: 1
     RobotsTxtContentLive: 'My live only robots.txt content.'
     RobotsTxtContentTest: 'My dev/test only robots.txt content.'

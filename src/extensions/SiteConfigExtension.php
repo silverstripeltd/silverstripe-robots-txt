@@ -11,7 +11,6 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\Core\Environment;
 use Throwable;
 
 /**
@@ -63,9 +62,9 @@ class SiteConfigExtension extends DataExtension
     /**
      * Returns a FieldList with the new fields
      *
-     * @return FieldList
+     * @inheritdoc
      */
-    public function updateCMSFields(FieldList $fields)
+    public function updateCMSFields(FieldList $fields): void
     {
         # Status dropdown
         $robotsTxtStatusField = DropdownField::create('RobotsTxtStatus', 'Status', [
@@ -73,23 +72,26 @@ class SiteConfigExtension extends DataExtension
             1 => 'enabled'
         ]);
         $robotsTxtStatusField->setRightTitle('Current environment: '. Director::get_environment_type());
-        $fields->addFieldToTab('Root.RobotsTxt', $robotsTxtStatusField);
 
         # Robots.txt (live) field
         $robotsTxtContentLiveField = TextareaField::create('RobotsTxtContentLive', 'Content (live)');
         $robotsTxtContentLiveField->setRows(10);
-        $fields->addFieldToTab('Root.RobotsTxt', $robotsTxtContentLiveField);
 
         # Robots.txt (test/dev) field
         $robotsTxtContentTestField = TextareaField::create('RobotsTxtContentTest', 'Content (test/dev)');
         $robotsTxtContentTestField->setRows(10);
-        $fields->addFieldToTab('Root.RobotsTxt', $robotsTxtContentTestField);
 
-        # Rename tab
+        # Add the fields and rename the tab
+        $fields->addFieldsToTab(
+            'Root.RobotsTxt',
+            [
+                $robotsTxtStatusField,
+                $robotsTxtContentLiveField,
+                $robotsTxtContentTestField
+            ]
+        );
         $robotsTxtTab = $fields->fieldByName('Root.RobotsTxt');
         $robotsTxtTab->setTitle('Robots.txt');
-
-        return $fields;
     }
 
     /**
