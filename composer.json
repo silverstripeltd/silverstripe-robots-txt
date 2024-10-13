@@ -38,5 +38,10 @@
       "silverstripe/vendor-plugin": true,
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
+  },
+  "extra": {
+    "expose": [
+      "docs/en/screenshots"
+    ]
   }
 }

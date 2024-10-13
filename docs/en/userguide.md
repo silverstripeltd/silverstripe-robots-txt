@@ -1,7 +1,7 @@
 # SilverStripe Robots.txt Documentation
 
 ## User guide
-![RobotsTxt settings](settings.png)
+![RobotsTxt settings](./screenshots/settings.png)
 On CMS Settings page, a new tab will be added to manage the **robots.txt** file with the options below.
 - **Status**
 *disabled:* the file will be removed.
