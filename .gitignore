@@ -1,0 +1,13 @@
+# Silverstripe/PHP specific
+/.env
+/vendor/
+/silverstripe.log
+/.phpunit.result.cache
+/phpunit.xml
+/phpcs.xml
+/resources
+/.graphql-generated
+/_graphql
+/app
+/assets
+/public
