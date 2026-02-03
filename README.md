@@ -6,7 +6,8 @@ Module to manage the **robots.txt file** on CMS admin area.
 * [Developer documentation](docs/en/devguide.md)
 
 ## Requirements
-* SilverStripe CMS 4.1+
+* SilverStripe CMS 4 & 5 - use v1
+* Silverstripe CMS 6 - use v2
 
 ## Installation
 ```

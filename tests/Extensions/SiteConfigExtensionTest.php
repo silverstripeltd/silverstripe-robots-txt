@@ -9,7 +9,7 @@ use SilverStripe\Core\Path;
 use SilverStripe\Control\HTTPStreamResponse;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\ORM\ValidationException;
+use SilverStripe\Core\Validation\ValidationException;
 use SilverStripe\SiteConfig\SiteConfig;
 
 class SiteConfigExtensionTest extends SapphireTest
