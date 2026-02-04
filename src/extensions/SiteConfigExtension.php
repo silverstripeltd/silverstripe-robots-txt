@@ -5,9 +5,9 @@ namespace Odorisioe\SilverStripe\RobotsTxt\Extensions;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use SilverStripe\Control\Director;
+use SilverStripe\Core\Extension;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Core\Path;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\DropdownField;
@@ -20,7 +20,7 @@ use Throwable;
  * @package silverstripe-robots-txt
  */
 
-class SiteConfigExtension extends DataExtension
+class SiteConfigExtension extends Extension
 {
 
     private static $db = [
